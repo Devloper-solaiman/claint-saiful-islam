@@ -1,24 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Review = ({ review }) => {
-    const { name, location, img, details } = review
     return (
-        <div className="card my-10 lg:max-w-lg text-primary-content">
-            <Link className="card-body">
-                <p className='text-justify'>{details}</p>
-                <div className='flex  mt-5'>
-                    <div className="avatar items-center justify-center">
-                        <div className="w-16 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                            <img alt='#' src={img} />
+        <div className="card lg:max-w-lg bg-base-100 shadow-xl">
+            <div className="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptates quo incidunt harum minus mollitia!</p>
+                <div className="flex items-center">
+                    <div className="avatar">
+                        <div className="w-16 rounded-full ring ring-primary ring-offset-base-100 mr-5">
+                            <img src={review.img} alt=""/>
                         </div>
                     </div>
-                    <div className='justify-center items-center ml-5'>
-                        <h3 className='text-accent text-xl font-bold'>{name}</h3>
-                        <p>{location}</p>
+                    <div>
+                        <h4 className='text-xl'>{review.name}</h4>
+                        <p>{review.location}</p>
                     </div>
                 </div>
-            </Link>
+            </div>
         </div>
     );
 };

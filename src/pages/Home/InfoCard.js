@@ -1,12 +1,14 @@
 import React from 'react';
 
-const InfoCard = ({ img, bgClass, cardTitle }) => {
+const InfoCard = ({img, cardTitle, bgClass}) => {
     return (
-        <div className={`card lg:card-side shadow-xl ${bgClass}`}>
-            <figure><img className='pl-2' src={img} alt="clock" /></figure>
+        <div className={`card lg:card-side bg-base-100 shadow-xl ${bgClass}`}>
+            <figure className='pl-5 pt-5'>
+                <img src={img} alt="Album" />
+            </figure>
             <div className="card-body text-white">
                 <h2 className="card-title">{cardTitle}</h2>
-                <p>Click the button to watch on Jetflix app.</p>
+                <p>Click the button to listen on Spotiwhy app.</p>
             </div>
         </div>
     );
